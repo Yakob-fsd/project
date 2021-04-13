@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="bootstrap.min.css">
+     <link rel="stylesheet" href="checkforce-style.css">
+
+</head>
+<body onload="checkId()">
+    <!--navbar starts here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Kerala Tourism</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="districts.html">Districts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sign_up.html" tabindex="-1" aria-disabled="true">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!--navbar ends here-->
+
+    <h3 style="margin-left: 20%; margin-top: 5%; color: blue;">Create an Account</h3>
+
+    <!--image-->
+    <div class="login image">
+      <img src="/images/signup_img.jpeg" alt="" style="width:500px;height:300px; float: right; margin-right: 7%;"> 
+     </div>
+     <!--/image-->
+
+    <!--form start-->
+    <div class="col-lg-6" style="margin-left: 5%;">
+    <form class="row g-3 needs-validation" action="index.html" novalidate>
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustomUsername" class="form-label">Email Id</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="email1" aria-describedby="inputGroupPrepend" onblur="validate1()" required>
+            <div class="invalid-feedback">
+              Please Enter Mail Id.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom05" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="ph" onblur="phonenumber()" required>
+          <div class="invalid-feedback">
+            Please provide a valid Phone Number.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control">
+          <div class="pwstrength_viewport_progress"></div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">Confirm Password</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12">
+        <button class="btn btn-primary" type="button">Submit form</button>
+        </div>
+      </form>
+    </div>
+      <!--form end-->
+
+
+    
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    
+      <!-- CheckForce.js -->
+      <script src="checkforce.min.js"></script>
+      <script>
+      var render = document.querySelector('.pwstrength_viewport_progress');
+      CheckForce('#password',{MaterializeTheme:true}).checkPassword(function(response){
+        render.innerHTML = '<strong>'+response.content+'</strong>';
+      });
+      </script>
+       <script src="foundation.js"></script>
+</body>
+
+</html>

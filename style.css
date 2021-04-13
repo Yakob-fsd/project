@@ -1,0 +1,60 @@
+*{ 
+    padding: 0px;
+    margin: 0px;
+}
+
+.myMargin{
+    margin: 25px;
+}
+
+
+.homepara{
+    width: 100%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    margin-left: 0%;
+    margin-top: 0%;
+    }
+
+  .headings{
+      margin-left: 4px;
+      margin-right: 4px;
+      background-color: khaki;
+      
+  }
+    
+  #head1{
+      
+      margin-left: 39%;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: blue ;
+      margin-top: 4px;
+    }
+
+  #head2{
+      margin-left: 37%;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: coral;
+      border-color: cornflowerblue;
+      margin-bottom: 4px;
+        }
+
+    .sidepara{
+        width: 40%;
+        border: 15px solid magenta;
+        padding: 50px;
+        margin: 20px;
+        margin-left: 0%;
+        margin-top: 0%;
+        float: right;
+        background-color: mediumaquamarine;
+        color: white;
+        
+
+    }
+     
+     
+ 
+
+ 

@@ -1,0 +1,39 @@
+#heading1{
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    background-color: blue;
+}
+
+.para1{
+    width: 100%;
+    border: 15px solid green;
+    padding: 30px;
+    margin: 10px;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.list{
+    width: 15%;
+    border: 12px solid tomato;
+    padding: 10px;
+    margin:10px;
+}
+
+.midpara{
+    width: 67%;
+    border: 12px solid magenta;
+    padding: 10px;
+    margin: 0px;
+    float: right;
+    background-color: maroon;
+    color: white;
+}
+
+#map{
+    float: right;
+    width: 14em;
+    height: 15em;
+}
+    
