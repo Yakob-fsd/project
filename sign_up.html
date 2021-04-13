@@ -55,7 +55,7 @@
 
     <!--form start-->
     <div class="col-lg-6" style="margin-left: 5%;">
-    <form class="row g-3 needs-validation" action="index.html" novalidate>
+    <form class="row g-3 needs-validation" action="index.html" method = "POST">
         <div class="col-md-6">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -74,11 +74,11 @@
           <label for="validationCustomUsername" class="form-label">Email Id</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="email1" aria-describedby="inputGroupPrepend" onblur="validate1()" required>
-            <div class="invalid-feedback">
-              Please Enter Mail Id.
-            </div>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="inputGroupPrepend" onblur="validate()" required>
+            <div id="emailHelp" class="form-text"> </div>
           </div>
+          <label for="error" id="error">We'll never share your email with anyone else.</label>
+
         </div>
         <div class="col-md-6">
           <label for="validationCustom03" class="form-label">City</label>
@@ -131,7 +131,7 @@
         </div>
         
         <div class="col-12">
-        <button class="btn btn-primary" type="button">Submit form</button>
+        <button class="btn btn-primary" type="submit">Submit form</button>
         </div>
       </form>
     </div>
